@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndoGulf Yoga Wellness — Organizational Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --saffron: #C8760A;
+    --saffron-light: #F5E6CC;
+    --saffron-pale: #FDF6EC;
+    --teal: #0F6E56;
+    --teal-light: #E1F5EE;
+    --teal-mid: #1D9E75;
+    --ink: #1A1208;
+    --ink-mid: #3D3120;
+    --ink-light: #7A6A55;
+    --border: #DDD0BB;
+    --surface: #FAFAF7;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    color: #F5E6CC;
+    padding: 80px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 340px; height: 100%;
+    background: repeating-linear-gradient(
+      60deg,
+      transparent,
+      transparent 18px,
+      rgba(200,118,10,0.06) 18px,
+      rgba(200,118,10,0.06) 19px
+    );
+  }
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: #F5E6CC;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--saffron);
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: #B8A990;
+    margin-bottom: 36px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    border-top: 0.5px solid rgba(200,118,10,0.35);
+    padding-top: 28px;
+  }
+  .meta-item label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .meta-item span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #C8B89A;
+  }
+
+  /* ── LAYOUT ── */
+  .page { max-width: 900px; margin: 0 auto; }
+  .section { padding: 60px 60px; border-bottom: 0.5px solid var(--border); }
+  .section:last-child { border-bottom: none; }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+  .section-title em { font-style: italic; color: var(--teal); }
+  .lead {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink-mid);
+    margin-bottom: 16px;
+  }
+  p { color: var(--ink-light); line-height: 1.8; margin-bottom: 14px; }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    border-left: 3px solid var(--saffron);
+    padding: 16px 24px;
+    margin: 32px 0;
+    background: var(--saffron-pale);
+    border-radius: 0 6px 6px 0;
+  }
+  .pull-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ink-mid);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* ── PILLARS GRID ── */
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 0.5px solid var(--border); border-radius: 10px; overflow: hidden; margin: 32px 0; }
+  .pillar { background: white; padding: 28px; }
+  .pillar-icon { font-size: 22px; margin-bottom: 12px; }
+  .pillar h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--ink); margin-bottom: 8px; }
+  .pillar p { font-size: 13.5px; line-height: 1.7; color: var(--ink-light); margin: 0; }
+
+  /* ── YOGA STYLES ── */
+  .styles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0; }
+  .style-card { background: var(--teal-light); border: 0.5px solid #9FE1CB; border-radius: 10px; padding: 20px; }
+  .style-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--teal); margin-bottom: 6px; }
+  .style-card p { font-size: 12.5px; color: #0F6E56; line-height: 1.6; margin: 0; }
+
+  /* ── SWIMMING PROGRAMS ── */
+  .swim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0; }
+  .swim-tag { background: white; border: 0.5px solid var(--border); border-radius: 8px; padding: 14px 18px; }
+  .swim-tag strong { display: block; font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+  .swim-tag span { font-size: 12px; color: var(--ink-light); }
+
+  /* ── PARTNERS ── */
+  .partners { display: flex; gap: 16px; flex-wrap: wrap; margin: 28px 0; }
+  .partner-badge { background: var(--ink); color: var(--saffron-light); padding: 10px 20px; border-radius: 6px; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ── STATS ── */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 0.5px solid var(--border); border-radius: 10px; overflow: hidden; margin: 40px 0; }
+  .stat { background: var(--saffron-pale); padding: 28px 20px; text-align: center; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; color: var(--saffron); line-height: 1; margin-bottom: 6px; }
+  .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-light); font-weight: 500; }
+
+  /* ── CONTACT CARD ── */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+  .contact-item { }
+  .contact-item label { display: block; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--saffron); margin-bottom: 6px; font-weight: 500; }
+  .contact-item span { font-size: 14px; color: var(--ink-mid); }
+
+  /* ── FOOTER ── */
+  .footer { background: var(--ink); color: #7A6A55; text-align: center; padding: 40px 60px; font-size: 12px; line-height: 1.8; }
+  .footer a { color: var(--saffron); text-decoration: none; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: #C8B89A; margin-bottom: 8px; letter-spacing: 0.05em; }
+
+  /* ── TESTIMONY ── */
+  .testimony { background: var(--teal-light); border: 0.5px solid #9FE1CB; border-radius: 10px; padding: 28px 32px; margin: 28px 0; }
+  .testimony p { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; color: var(--teal); margin-bottom: 12px; font-weight: 300; line-height: 1.55; }
+  .testimony cite { font-size: 12px; color: #0F6E56; font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  @media (max-width: 700px) {
+    .hero { padding: 48px 28px 40px; }
+    .hero h1 { font-size: 42px; }
+    .section { padding: 40px 28px; }
+    .pillars, .swim-grid, .contact-grid, .stats { grid-template-columns: 1fr; }
+    .styles-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <p class="hero-eyebrow">Organizational Profile · Kingdom of Bahrain</p>
+    <h1>IndoGulf<br><em>Yoga Wellness</em></h1>
+    <p class="hero-sub">Establishing Peace &amp; Harmony Eternally</p>
+    <div class="hero-meta">
+      <div class="meta-item"><label>CR Number</label><span>109026-01</span></div>
+      <div class="meta-item"><label>In Association With</label><span>Prachi Fitness &amp; Yoga Instructions</span></div>
+      <div class="meta-item"><label>Established</label><span>2005</span></div>
+      <div class="meta-item"><label>Location</label><span>Diplomatic Area, Manama, Bahrain</span></div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <p class="section-label">About Us</p>
+    <h2 class="section-title">Where <em>Inner Peace</em><br>Meets Outer Vitality</h2>
+    <p class="lead">IndoGulf Yoga Wellness, in association with Prachi Fitness and Yoga Instructions (CR 109026-01), is committed to delivering quality training programs through the collaboration and resources of eminent teachers across various areas of wellness and fitness.</p>
+    <p>Born from a vision to bring authentic Traditional Yoga from India to the Gulf, IndoGulf Yoga Wellness has steadily built a distinguished presence in Bahrain since 2005. With an ongoing program operating in leading hospitality chains and fitness centers — including the Gulf Hotel and Crowne Plaza — the organization has introduced hundreds of people to the transformative power of Traditional Hatha Yoga.</p>
+    <div class="pull-quote">
+      <p>"Our organization provides the finest masters and trainers in the Kingdom of Bahrain — dedicated to delivering the best in their area of specialization, through an affiliate network of global yoga and fitness programs."</p>
+    </div>
+    <p>IndoGulf Yoga Wellness is a humble endeavor towards meeting the needs of health clubs and facilities that possess the required infrastructure for group or personal training but lack the specialized manpower. The organization bridges this gap by supplying elite, certified trainers and pioneering wellness events across the Kingdom.</p>
+  </section>
+
+  <!-- STATS -->
+  <section class="section" style="padding-top: 0; padding-bottom: 0; border-bottom: none;">
+    <div class="stats">
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Years of Service</div></div>
+      <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Happy Clients</div></div>
+      <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Yoga Programs</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Flagship Websites</div></div>
+    </div>
+  </section>
+
+  <!-- YOGA -->
+  <section class="section">
+    <p class="section-label">Yoga Programs</p>
+    <h2 class="section-title">The Art of<br><em>Traditional Yoga</em></h2>
+    <p class="lead">Rooted in the ancient wisdom of India, IndoGulf's yoga curriculum spans classical and contemporary styles — each designed to harmonize body, breath, and mind.</p>
+    <div class="styles-grid">
+      <div class="style-card">
+        <h4>Hatha Yoga</h4>
+        <p>A perfect blend of gentle postures and mindful breathing to harmonize body and mind. The cornerstone of IndoGulf's traditional offering.</p>
+      </div>
+      <div class="style-card">
+        <h4>Vinyasa Yoga</h4>
+        <p>Balance your body and center your mind through flowing sequences that connect movement to breath for a healthier, happier you.</p>
+      </div>
+      <div class="style-card">
+        <h4>Kundalini Yoga</h4>
+        <p>Awakening the senses where every breath guides you inward — a powerful practice for spiritual energy and inner transformation.</p>
+      </div>
+      <div class="style-card">
+        <h4>Intuitive Yoga</h4>
+        <p>Let your body guide you, your breath center you, and your spirit rise in this free-flowing, body-led practice.</p>
+      </div>
+      <div class="style-card">
+        <h4>Aroma Yoga</h4>
+        <p>Gentle movements, aromatic calm, and the awakening of your spirit through the integration of therapeutic essential oils.</p>
+      </div>
+      <div class="style-card">
+        <h4>Slow Yoga</h4>
+        <p>Flow slowly, breathe deeply, and let your energy rise like morning light in this restorative, mindful practice.</p>
+      </div>
+    </div>
+    <p>Beyond asana, IndoGulf also offers <strong>Yoga Nidra</strong>, <strong>Meditation</strong>, <strong>Stress Management Programs</strong>, and <strong>Mentorship initiatives</strong> — forming a holistic pathway to mental clarity and emotional resilience.</p>
+  </section>
+
+  <!-- SWIMMING -->
+  <section class="section">
+    <p class="section-label">Swimming Academy</p>
+    <h2 class="section-title">Learn to Swim in<br><em>10 Hours</em></h2>
+    <p class="lead">IndoGulf Wellness Swimming Academy provides expert swimming instruction for all ages and genders — fostering confidence, water safety, and a lifelong love of swimming in a safe, supportive environment.</p>
+    <p>The Academy is staffed by certified male and female professional coaches, making it one of Bahrain's few facilities offering dedicated ladies-only batches with exclusively female instructors. Programs are tailored to diverse needs — from first-time swimmers to competitive athletes.</p>
+    <div class="swim-grid">
+      <div class="swim-tag"><strong>Group Classes</strong><span>Fun, social, and engaging — learn alongside others in structured group sessions.</span></div>
+      <div class="swim-tag"><strong>Private Lessons</strong><span>Personalized, one-on-one instruction tailored to individual skill level and goals.</span></div>
+      <div class="swim-tag"><strong>Ladies-Only Batches</strong><span>Exclusive sessions with certified female coaches in a comfortable, private setting.</span></div>
+      <div class="swim-tag"><strong>Competitive Training</strong><span>Advanced performance programs for swimmers looking to compete at higher levels.</span></div>
+      <div class="swim-tag"><strong>Cabin Crew Swimming</strong><span>Essential water safety and confidence training for aviation professionals.</span></div>
+      <div class="swim-tag"><strong>Family Batches</strong><span>Joint sessions with special family discount packages for all-age participation.</span></div>
+      <div class="swim-tag"><strong>Expat Swimming Courses</strong><span>A welcoming program for newcomers to Bahrain — meet fellow expats while learning.</span></div>
+      <div class="swim-tag"><strong>Holiday Courses</strong><span>Intensive holiday programs for children and adults during school break periods.</span></div>
+    </div>
+    <p>Specialist services also include <strong>Hydrotherapy</strong>, <strong>Aqua Aerobics</strong>, and <strong>Scuba Diving / Sea Beach Corporate Training</strong> with certified instructors and official certification upon completion.</p>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="section">
+    <p class="section-label">Our Approach</p>
+    <h2 class="section-title">A Holistic<br><em>Wellness Ecosystem</em></h2>
+    <p class="lead">IndoGulf Wellness believes that true well-being starts from within and extends outward — nurturing every dimension of the human experience.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🌿</div>
+        <h4>Expert Faculty</h4>
+        <p>Only eminent masters and certified trainers are engaged — practitioners with deep lineage in their disciplines, sourced from IndoGulf's global network of yoga and fitness programs.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🧘</div>
+        <h4>Traditional Roots</h4>
+        <p>Programs draw on classical Indian yogic tradition — Hatha Yoga at the core — while meeting the modern wellness needs of residents across the Gulf.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🏊</div>
+        <h4>Inclusive Access</h4>
+        <p>Programs are designed for every age, gender, and ability level — with dedicated batches for ladies, expats, families, cabin crew, and competitive athletes.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">📜</div>
+        <h4>Verified Certification</h4>
+        <p>Participants in yoga, swimming, and wellness programs receive verifiable certificates — recognized credentials that showcase commitment and achievement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONY -->
+  <section class="section">
+    <p class="section-label">Client Voices</p>
+    <div class="testimony">
+      <p>"IndoGulf Yoga and Wellness transformed my life. The breathing techniques and meditation practices have greatly improved my mental wellbeing and soft skills."</p>
+      <cite>— Aditi Sharma, Yoga Student</cite>
+    </div>
+    <div class="testimony">
+      <p>"IndoGulf Wellness provided excellent swimming lessons for my kids. The instructors are patient and skilled, making learning fun and effective for all ages!"</p>
+      <cite>— Swimming Academy Parent</cite>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section">
+    <p class="section-label">Institutional Partners</p>
+    <h2 class="section-title">Trusted by <em>Bahrain's Finest</em></h2>
+    <p>IndoGulf Yoga Wellness operates ongoing programs within some of Bahrain's most prestigious hospitality establishments, demonstrating its credibility and quality in the Kingdom's competitive wellness landscape.</p>
+    <div class="partners">
+      <div class="partner-badge">Gulf Hotel Bahrain</div>
+      <div class="partner-badge">Crowne Plaza Bahrain</div>
+      <div class="partner-badge">Leading Fitness Centers</div>
+    </div>
+    <p>The organization continues to expand its footprint across leading hotels, corporate campuses, and health clubs — bringing certified wellness expertise wherever infrastructure exists but specialist human capital is needed.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <p class="section-label">Get in Touch</p>
+    <h2 class="section-title">Connect with<br><em>IndoGulf Wellness</em></h2>
+    <div class="contact-grid">
+      <div class="contact-item"><label>Phone</label><span>+973 3437 5102 / +973 3500 4221</span></div>
+      <div class="contact-item"><label>Email</label><span>info@indogulfwellness.com</span></div>
+      <div class="contact-item"><label>Address</label><span>Building 34, Road 1701, Block 317<br>Diplomatic Area, Manama, Bahrain</span></div>
+      <div class="contact-item"><label>Operating Hours</label><span>All Days: 5:00 PM – 7:00 PM &amp; 9:00 AM – 11:00 AM</span></div>
+      <div class="contact-item"><label>Yoga Website</label><span><a href="https://indogulfyoga.com" style="color:var(--teal);">indogulfyoga.com</a></span></div>
+      <div class="contact-item"><label>Wellness Website</label><span><a href="https://indogulfwellness.com" style="color:var(--teal);">indogulfwellness.com</a></span></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-logo">IndoGulf Yoga Wellness</div>
+    <p>CR 109026-01 · In Association with Prachi Fitness &amp; Yoga Instructions<br>
+    Diplomatic Area, Manama, Kingdom of Bahrain · Est. 2005<br>
+    <a href="https://indogulfyoga.com">indogulfyoga.com</a> &nbsp;·&nbsp; <a href="https://indogulfwellness.com">indogulfwellness.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
