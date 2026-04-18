@@ -1,0 +1,416 @@
+/*
+ * ════════════════════════════════════════════════════════════
+ *  INDOGULF WELLNESS — Design Theme File
+ *  Version: 1.0
+ *  Usage: Import this file before your main stylesheet.
+ *         All tokens are available as CSS custom properties.
+ * ════════════════════════════════════════════════════════════
+ */
+
+
+/* ══════════════════════════════════════════
+   1. COLOR PALETTE
+   ══════════════════════════════════════════ */
+:root {
+
+  /* Core Neutrals */
+  --color-deep:       #1a1a12;   /* Page background — near-black with warm undertone */
+  --color-charcoal:   #2d2d2a;   /* Footer, stats bar — slightly lifted dark */
+  --color-ink:        #1a3a2e;   /* Primary dark green used in map / map elements */
+  --color-ink-faded:  #4a7c63;   /* Muted green — secondary text on light surfaces */
+
+  /* Light / Parchment */
+  --color-cream:      #f0ebe0;   /* Main light background, body text on dark */
+  --color-cream-dark: #d8cdb4;   /* Parchment border, secondary cream */
+  --color-ivory:      #faf7f0;   /* Services section background — brightest light */
+  --color-mist:       #e8ede6;   /* Programs section — cool off-white */
+
+  /* Brand Gold */
+  --color-gold:       #b8902a;   /* Deep gold — borders, SVG accents */
+  --color-gold-light: #d4a94a;   /* Slightly lighter gold — hover states */
+  --color-gold-main:  #d4a843;   /* Primary brand gold — CTAs, labels, highlights */
+
+  /* Accent */
+  --color-sage:       #7a9e7e;   /* Nature green — mindfulness 3D, dosha cards */
+  --color-earth:      #c4956a;   /* Warm terracotta — testimonials background */
+  --color-water:      #4a7c95;   /* Deep teal — unused in current build, reserved */
+
+
+  /* ── Service Card Gradients (backgrounds) ── */
+  --gradient-s1-start: #4a7246;
+  --gradient-s1-end:   #1a3318;
+
+  --gradient-s2-start: #3d6b80;
+  --gradient-s2-end:   #1a2e38;
+
+  --gradient-s3-start: #8b5a3c;
+  --gradient-s3-end:   #3d2218;
+
+  --gradient-s4-start: #7a6b4a;
+  --gradient-s4-end:   #32280f;
+
+  --gradient-s5-start: #6b4a7a;
+  --gradient-s5-end:   #28183d;
+
+  --gradient-s6-start: #4a7a6b;
+  --gradient-s6-end:   #182e28;
+}
+
+
+/* ══════════════════════════════════════════
+   2. TYPOGRAPHY
+   ══════════════════════════════════════════ */
+
+/*
+  Google Fonts import (add to <head> or @import at top of your stylesheet):
+
+  @import url('https://fonts.googleapis.com/css2?
+    family=Cinzel:wght@400;600&
+    family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&
+    family=DM+Sans:wght@300;400;500&
+    display=swap');
+*/
+
+:root {
+  /* Font Families */
+  --font-serif:       'Cormorant Garamond', Georgia, serif;   /* Headings, quotes, section titles */
+  --font-display:     'Cinzel', serif;                        /* Logo badge, formal caps */
+  --font-sans:        'DM Sans', system-ui, sans-serif;       /* Body copy, labels, UI text */
+
+  /* Font Weights */
+  --fw-light:         300;
+  --fw-regular:       400;
+  --fw-medium:        500;
+  --fw-semibold:      600;
+
+  /* Font Sizes — fluid scale */
+  --fs-hero:          clamp(3.5rem, 8vw, 7rem);    /* Hero h1 */
+  --fs-section-title: clamp(2.5rem, 5vw, 4rem);    /* Section headings */
+  --fs-cta-title:     clamp(3rem, 6vw, 5.5rem);    /* CTA section heading */
+  --fs-card-title:    1.6rem;                       /* Service card names */
+  --fs-program-name:  1.8rem;                       /* Programs list items */
+  --fs-dosha-name:    1.4rem;                       /* Dosha card titles */
+  --fs-mind-feat:     1.3rem;                       /* Mindfulness feature titles */
+  --fs-testi:         1.2rem;                       /* Testimonial quote text */
+  --fs-stat:          3.5rem;                       /* Counter numbers */
+  --fs-nav-logo:      1.8rem;                       /* Nav logo */
+  --fs-footer-logo:   2rem;                         /* Footer logo */
+
+  --fs-label:         0.70rem;                      /* Section labels (eyebrows) */
+  --fs-eyebrow:       0.75rem;                      /* Hero eyebrow */
+  --fs-nav-link:      0.82rem;                      /* Nav links */
+  --fs-body:          0.88rem;                      /* General body / feature text */
+  --fs-body-sm:       0.83rem;                      /* Smaller body, footer, meta */
+  --fs-caption:       0.78rem;                      /* Tags, sub-labels */
+  --fs-fine:          0.72rem;                      /* Program tags */
+  --fs-micro:         0.70rem;                      /* Footer column titles */
+  --fs-tiny:          0.65rem;                      /* Scroll indicator */
+
+  /* Line Heights */
+  --lh-tight:  1.05;   /* Hero title */
+  --lh-normal: 1.15;   /* Section titles */
+  --lh-body:   1.70;   /* Paragraph text */
+  --lh-loose:  1.80;   /* Subheadings, descriptions */
+
+  /* Letter Spacings */
+  --ls-widest:  0.30em;   /* Section labels */
+  --ls-wide:    0.20em;   /* Uppercase accents */
+  --ls-normal:  0.15em;   /* Stat labels, nav CTA */
+  --ls-slight:  0.12em;   /* Nav links, buttons */
+  --ls-fine:    0.10em;   /* Author names */
+}
+
+
+/* ══════════════════════════════════════════
+   3. SPACING & LAYOUT
+   ══════════════════════════════════════════ */
+:root {
+  /* Section padding */
+  --section-padding-v:  8rem;
+  --section-padding-h:  4rem;
+  --section-padding-v-sm: 5rem;   /* Mobile */
+  --section-padding-h-sm: 1.5rem; /* Mobile */
+
+  /* CTA section — extra vertical breathing room */
+  --cta-padding-v: 10rem;
+
+  /* Nav */
+  --nav-padding-v: 1.5rem;
+  --nav-padding-h: 4rem;
+
+  /* Gaps */
+  --gap-grid-services: 2px;
+  --gap-grid-dosha:    1.5rem;
+  --gap-grid-stats:    2rem;
+  --gap-programs:      1px;
+  --gap-mind-section:  4rem;
+  --gap-ayurveda:      6rem;
+  --gap-hero-btns:     1.2rem;
+  --gap-nav-links:     2.5rem;
+  --gap-testi:         2rem;
+  --gap-footer-cols:   3rem;
+  --gap-mind-feats:    2rem;
+
+  /* Max widths */
+  --max-hero-content:  900px;
+  --max-hero-sub:      480px;
+  --max-cta-title:     900px;
+  --max-cta-sub:       500px;
+  --max-footer-desc:   260px;
+  --max-ayurveda-desc: 440px;
+
+  /* Border radii */
+  --radius-parchment:  5px;
+  --radius-none:       0px;   /* Cards are intentionally square */
+}
+
+
+/* ══════════════════════════════════════════
+   4. BORDERS & OUTLINES
+   ══════════════════════════════════════════ */
+:root {
+  --border-nav-cta:        1px solid var(--color-gold-main);
+  --border-btn-outline:    1px solid rgba(245, 240, 232, 0.40);
+  --border-dosha:          1px solid rgba(245, 240, 232, 0.10);
+  --border-dosha-hover:    1px solid var(--color-gold-main);
+  --border-testi:          1px solid rgba(255, 255, 255, 0.15);
+  --border-footer-top:     1px solid rgba(245, 240, 232, 0.08);
+  --border-program-rule:   1px solid rgba(26, 26, 18, 0.15);
+  --border-parchment-inner: 2px solid var(--color-cream-dark);
+  --border-parchment-mid:   5px solid #a89060;
+  --border-parchment-outer: 8px solid #7a6040;
+}
+
+
+/* ══════════════════════════════════════════
+   5. SHADOWS & ELEVATION
+   ══════════════════════════════════════════ */
+:root {
+  --shadow-parchment:
+    0 0 0 2px var(--color-cream-dark),
+    0 0 0 5px #a89060,
+    0 0 0 8px #7a6040,
+    0 0 80px 30px rgba(0, 0, 0, 0.95),
+    inset 0 0 100px rgba(0, 0, 0, 0.12);
+
+  --shadow-btn-primary-hover:
+    0 8px 24px rgba(212, 168, 67, 0.30);
+}
+
+
+/* ══════════════════════════════════════════
+   6. BACKGROUNDS
+   ══════════════════════════════════════════ */
+:root {
+  --bg-preloader: radial-gradient(ellipse at 50% 40%, #0d2218 0%, #050e09 100%);
+  --bg-nav-scrolled: rgba(26, 26, 18, 0.92);
+
+  /* Preloader dot grid */
+  --bg-grid-dot-color: rgba(45, 92, 70, 0.15);
+  --bg-grid-dot-size:  48px;
+
+  /* Stats bar */
+  --bg-stats: var(--color-charcoal);
+
+  /* Dosha highlight card */
+  --bg-dosha-highlight: rgba(212, 168, 67, 0.08);
+  --border-dosha-highlight: rgba(212, 168, 67, 0.30);
+
+  /* Mindfulness feature icon */
+  --bg-mind-icon: rgba(212, 168, 67, 0.10);
+
+  /* Testimonial card */
+  --bg-testi-card: rgba(255, 255, 255, 0.10);
+}
+
+
+/* ══════════════════════════════════════════
+   7. TRANSITIONS & ANIMATION SETTINGS
+   ══════════════════════════════════════════ */
+:root {
+  /* Durations */
+  --duration-fast:    0.2s;
+  --duration-normal:  0.3s;
+  --duration-medium:  0.5s;
+  --duration-slow:    0.7s;
+  --duration-xslow:   1.0s;
+
+  /* Easing */
+  --ease-smooth:      cubic-bezier(0.23, 1, 0.32, 1);   /* Card hovers, reveals */
+  --ease-unfurl:      cubic-bezier(0.22, 1, 0.36, 1);   /* Parchment opening */
+  --ease-out:         power3.out;                        /* GSAP default */
+
+  /* GSAP scroll reveal defaults */
+  --reveal-y-offset:  40px;
+  --reveal-x-offset: -40px;
+  --reveal-duration:  1s;
+  --reveal-trigger:   top 82%;
+
+  /* Marquee speed */
+  --marquee-duration: 20s;
+
+  /* Cursor ring lag factor */
+  --cursor-lag:       0.12;
+}
+
+
+/* ══════════════════════════════════════════
+   8. Z-INDEX SCALE
+   ══════════════════════════════════════════ */
+:root {
+  --z-three-canvas:   0;     /* Three.js hero canvas — behind content */
+  --z-hero-content:   2;     /* Hero text — above canvas */
+  --z-nav:            100;   /* Fixed navigation */
+  --z-cursor-ring:    9998;  /* Trailing cursor ring */
+  --z-cursor:         9999;  /* Cursor dot */
+  --z-preloader:      9999;  /* Preloader — topmost */
+}
+
+
+/* ══════════════════════════════════════════
+   9. OPACITY TOKENS
+   ══════════════════════════════════════════ */
+:root {
+  /* Text opacity levels */
+  --opacity-strong:   0.90;
+  --opacity-body:     0.70;
+  --opacity-muted:    0.60;
+  --opacity-faint:    0.50;
+  --opacity-ghost:    0.40;
+  --opacity-whisper:  0.30;
+
+  /* Common RGBA shorthands */
+  --cream-70:  rgba(245, 240, 232, 0.70);
+  --cream-60:  rgba(245, 240, 232, 0.60);
+  --cream-50:  rgba(245, 240, 232, 0.50);
+  --cream-40:  rgba(245, 240, 232, 0.40);
+  --cream-30:  rgba(245, 240, 232, 0.30);
+  --cream-10:  rgba(245, 240, 232, 0.10);
+  --gold-30:   rgba(212, 168, 67, 0.30);
+  --gold-50:   rgba(212, 168, 67, 0.50);
+  --black-80:  rgba(0, 0, 0, 0.80);        /* Service card gradient overlay */
+}
+
+
+/* ══════════════════════════════════════════
+   10. THREE.JS / 3D SCENE SETTINGS
+   ══════════════════════════════════════════ */
+:root {
+  /* Hero scene colors (hex for Three.js — use as JS constants) */
+  --three-gold:        0xd4a843;
+  --three-sage:        0x7a9e7e;
+  --three-earth:       0xc4956a;
+
+  /* Hero wireframe opacities */
+  --three-hero-torus-knot-1: 0.15;
+  --three-hero-torus-knot-2: 0.10;
+  --three-hero-torus-ring:   0.08;
+  --three-hero-icosa:        0.06;
+  --three-hero-particles:    0.50;
+
+  /* Mind canvas wireframe opacities */
+  --three-mind-sphere-outer: 0.25;
+  --three-mind-sphere-inner: 0.15;
+  --three-mind-ring-1:       0.30;
+  --three-mind-ring-2:       0.20;
+
+  /* Camera positions */
+  --three-hero-cam-z:  5;
+  --three-mind-cam-z:  3.5;
+
+  /* Hero group offset (right-side placement) */
+  --three-hero-group-x: 3;
+  --three-hero-group-z: -1;
+}
+
+
+/* ══════════════════════════════════════════
+   11. COMPONENT QUICK-REFERENCE
+   ══════════════════════════════════════════ */
+
+/*
+  ┌─────────────────────────────────────────────────────┐
+  │  COMPONENT         TOKEN DEPENDENCIES               │
+  ├─────────────────────────────────────────────────────┤
+  │  Preloader         --bg-preloader, --z-preloader    │
+  │  Parchment map     --color-cream, --shadow-parchment│
+  │  Nav bar           --nav-padding-*, --z-nav          │
+  │                    --bg-nav-scrolled                 │
+  │  Hero              --fs-hero, --max-hero-content     │
+  │                    --color-gold-main                 │
+  │  Marquee           --color-gold-main, --color-deep   │
+  │                    --marquee-duration                │
+  │  Service cards     --gradient-s1-* through s6-*      │
+  │                    --ease-smooth                     │
+  │  Dosha grid        --border-dosha, --color-gold-main │
+  │  Stats bar         --bg-stats, --fs-stat             │
+  │  Programs list     --border-program-rule             │
+  │  Mindfulness       --bg-mind-icon, --color-gold-main │
+  │  Testimonials      --bg-testi-card, --border-testi   │
+  │                    --color-earth                     │
+  │  CTA               --cta-padding-v, --max-cta-title  │
+  │  Footer            --color-charcoal, --border-footer │
+  │  Cursor            --color-gold-main, --z-cursor     │
+  └─────────────────────────────────────────────────────┘
+*/
+
+
+/* ══════════════════════════════════════════
+   12. UTILITY CLASSES (opt-in helpers)
+   ══════════════════════════════════════════ */
+
+/* Typography */
+.u-serif       { font-family: var(--font-serif); }
+.u-display     { font-family: var(--font-display); }
+.u-sans        { font-family: var(--font-sans); }
+.u-italic      { font-style: italic; }
+.u-light       { font-weight: var(--fw-light); }
+.u-label       { font-size: var(--fs-label); letter-spacing: var(--ls-widest); text-transform: uppercase; color: var(--color-gold-main); }
+
+/* Colors */
+.u-gold        { color: var(--color-gold-main); }
+.u-cream       { color: var(--color-cream); }
+.u-muted       { color: var(--cream-60); }
+.u-deep-bg     { background-color: var(--color-deep); }
+.u-ivory-bg    { background-color: var(--color-ivory); }
+.u-mist-bg     { background-color: var(--color-mist); }
+.u-earth-bg    { background-color: var(--color-earth); }
+.u-charcoal-bg { background-color: var(--color-charcoal); }
+
+/* Buttons */
+.u-btn-primary {
+  padding: 1rem 2.5rem;
+  background: var(--color-gold-main);
+  color: var(--color-deep);
+  font-family: var(--font-sans);
+  font-size: var(--fs-nav-link);
+  letter-spacing: var(--ls-slight);
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform var(--duration-normal), box-shadow var(--duration-normal);
+}
+.u-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-primary-hover);
+}
+
+.u-btn-outline {
+  padding: 1rem 2.5rem;
+  border: var(--border-btn-outline);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: var(--fs-nav-link);
+  letter-spacing: var(--ls-slight);
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color var(--duration-normal);
+}
+.u-btn-outline:hover {
+  border-color: var(--color-cream);
+}
+
+/* Reveal animation hooks (used with GSAP) */
+.u-reveal      { opacity: 0; transform: translateY(var(--reveal-y-offset)); }
+.u-reveal-left { opacity: 0; transform: translateX(var(--reveal-x-offset)); }
